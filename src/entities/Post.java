@@ -12,7 +12,9 @@ public class Post {
 	
 	private List<Comment> Comments = new ArrayList<>();
 	
-	public Post() {}
+	public Post() {
+		this.likes = 0;
+	}
 
 	public Post(Date momment, String title, String content, Integer likes) {
 		this.momment = momment;
@@ -59,6 +61,9 @@ public class Post {
 	
 	public void addComment(Comment comment) {
 		Comments.add(comment);
+	}
+	public void likePost() {
+		this.likes++;
 	}
 	
 }
